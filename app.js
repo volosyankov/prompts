@@ -146,6 +146,8 @@ function updateLanguage() {
   
   document.getElementById('footer-text-' + currentLanguage).style.display = 'inline';
   document.getElementById('footer-text-' + (currentLanguage === 'en' ? 'ru' : 'en')).style.display = 'none';
+  document.getElementById('bot-info-' + currentLanguage).style.display = 'block';
+  document.getElementById('bot-info-' + (currentLanguage === 'en' ? 'ru' : 'en')).style.display = 'none';
 }
 
 function updateCategoryFilters() {
