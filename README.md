@@ -1,60 +1,62 @@
-# Prompt Gallery
+# Uni Prompt
 
-This project is a web application for displaying and searching various prompts across different categories.
+Public repository for [uni-prompt.com](https://uni-prompt.com/) — a bilingual prompt library for practical AI workflows.
 
-## Features
+Uni Prompt is a lightweight web app for publishing, browsing, searching, and copying structured prompts across business, content, sales, creativity, career, and personal productivity use cases.
 
-- Display a list of prompts from a JSON file
-- Search prompts by keywords
-- Filter prompts by categories
-- Support for two languages: English and Russian
-- Simple and intuitive interface
-- Various prompt categories (SMM, relationships, family, creativity, career, sales)
-- Ability to copy prompt text to clipboard
+## What This Site Does
+
+- Publishes a curated prompt library in English and Russian
+- Groups prompts by practical categories
+- Supports keyword search and category filtering
+- Opens prompt details in a focused modal view
+- Lets users copy prompt text quickly
+- Runs as a simple static frontend without a backend dependency
+
+## Why It Exists
+
+Most people do not need another abstract AI tool. They need ready-to-use prompts that help them get work done: write content, structure offers, prepare sales materials, think through business ideas, and automate repetitive thinking tasks.
+
+This repository is the source for that public prompt collection.
 
 ## Project Structure
 
-- `index.html`: Main HTML page of the application
-- `app.js`: JavaScript code for loading, filtering, and displaying prompts
-- `prompts.json`: JSON file containing the list of prompts
-- `LICENSE`: MIT license file
-- `icons/`: Folder with icons for various platforms
+- `index.html` — main page
+- `app.js` — prompt loading, search, filtering, and UI behavior
+- `prompts.json` — prompt database
+- `icons/` — interface and platform icons
+- `LICENSE` — MIT license
 
-## Usage
+## Adding Prompts
 
-1. Open `index.html` in a web browser.
-2. Browse the list of available prompts.
-3. Use the search field to filter prompts by keywords.
-4. Select a category to filter prompts.
-5. Click on a prompt card to open the full text.
-6. Click on the prompt text in the modal window to copy it to the clipboard.
-
-## Development
-
-To add new prompts, edit the `prompts.json` file following the existing structure. Each prompt should be an object with the following format:
+Prompts are stored in `prompts.json`. Each entry follows this structure:
 
 ```json
 {
   "category": {
-    "en": "Category in English",
-    "ru": "Категория на русском"
+    "en": "Business",
+    "ru": "Бизнес"
   },
   "name": {
-    "en": "Prompt name in English",
-    "ru": "Название промпта на русском"
+    "en": "Prompt name",
+    "ru": "Название промпта"
   },
   "description": {
-    "en": "Brief description in English",
-    "ru": "Краткое описание на русском"
+    "en": "Short description",
+    "ru": "Краткое описание"
   },
   "text": {
-    "en": "Full prompt text in English",
-    "ru": "Полный текст промпта на русском"
+    "en": "Full prompt text",
+    "ru": "Полный текст промпта"
   },
   "dateAdded": "YYYY-MM-DDT00:00:00Z"
 }
 ```
 
+## Live Site
+
+[https://uni-prompt.com/](https://uni-prompt.com/)
+
 ## License
 
-This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT License.
